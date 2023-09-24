@@ -1,0 +1,18 @@
+{% load humanize %}
+
+<html>
+    <ul>
+        <li> {{posting.title|title }} </li>
+        <li> {{posting.company|title }} </li>
+        <li> {{posting.salary|intcomma }} </li>
+        <li> 
+            {% if posting.is_active %}
+                Job is Active
+            {% else %}
+                Job is Inactive
+            {% endif %}
+        </li>
+        <hr>
+        <li> {{posting.description }} </li>
+    </ul>
+</html> 
